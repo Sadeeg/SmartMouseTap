@@ -1,9 +1,8 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
+#include "config.h"
  
-const char* SSID = "WtfNet666";
-const char* PSK = "AJSabf2015";
-const char* MQTT_BROKER = "192.168.22.27";
+
  
 WiFiClient espClient;
 PubSubClient client(espClient);

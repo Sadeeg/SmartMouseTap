@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  web:
+    image: enservice:1
+    build: .
+    env_file:
+     - mail.env

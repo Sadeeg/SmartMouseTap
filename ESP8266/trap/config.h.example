@@ -1,0 +1,3 @@
+const char* SSID = "SSID";
+const char* PSK = "PASSWORD";
+const char* MQTT_BROKER = "MQTTSERVER";

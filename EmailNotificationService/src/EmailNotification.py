@@ -12,7 +12,12 @@ emailUser = os.getenv('EMAIL_USER')
 emailPassword = os.getenv('EMAIL_PASSWORD')
 mqttServer = os.getenv('MQTT_SERVER')
 to = os.getenv('TO')
-
+print('Configuration')
+print('emailServer = '+os.getenv('EMAIL_SERVER'))
+print('emailUser ='+ os.getenv('EMAIL_USER'))
+print('emailPassword ='+ os.getenv('EMAIL_PASSWORD'))
+print('mqttServer ='+ os.getenv('MQTT_SERVER'))
+print('to ='+ os.getenv('TO'))
   
 def on_connect(client, userdata, flags, rc):
   
@@ -39,7 +44,7 @@ def sendMail(subject, message):
  server = smtplib.SMTP(smtphost)
  server.starttls()
  server.login(username, password)
- server.sendmail(msg['From'], msg['To'], msg.as_string())
+ server.sendmail(msg['From'], to.split(','), msg.as_string())
  server.quit()
  print ("Successfully sent email message to %s:" % (msg['To']))
         

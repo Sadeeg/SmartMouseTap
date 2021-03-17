@@ -6,4 +6,4 @@ RUN pip3 install paho-mqtt python-etcd
 
 COPY . .
 
-CMD [ "python3", "src/EmailNotification.py"]
+CMD [ "python3","-u", "src/EmailNotification.py"]
